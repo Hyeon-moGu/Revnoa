@@ -1,0 +1,44 @@
+uuid: "Agent-01"
+interval: 10
+retry_count: 300
+
+http_server:
+  enabled: true
+  port: 6060
+
+api:
+  server: "http://localhost:5050/api/metrics"         # Leave empty to disable metrics Push
+  heartbeat: "http://localhost:5050/api/heartbeat"    # Leave empty to disable heartbeat
+  log: "http://localhost:5050/api/logs"               # Disabled if collectors.log.enabled is false
+  auth_key: "test-secret"
+
+collectors:
+  cpu:
+    enabled: true
+  mem:
+    enabled: true
+  disk:
+    enabled: true
+  net:
+    enabled: true
+  ports:
+    enabled: true
+  host:
+    enabled: true
+  docker:
+    enabled: true
+  redis:
+    enabled: true
+    addr: "localhost:6379"
+  log:
+    enabled: true
+    buffer_count: 5
+    flush_interval: 20
+    files:
+      - C:\test\logs\test.log
+      - /Users/test/Documents/revnoa/log/revnoa_2025-01-01.log
+
+storage:
+  file_backup:
+    enabled: true
+    dir: "/Users/test/Documents/backup/"

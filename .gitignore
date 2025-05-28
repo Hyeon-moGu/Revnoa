@@ -1,0 +1,22 @@
+# Go artifacts & OS-specific
+/revnoa
+*.exe
+*.out
+.DS_Store
+Thumbs.db
+
+# Logs
+/revnoa_log/
+revnoa_log/
+**/*.log
+
+# Backup files
+*.bak
+*.tmp
+*.swp
+
+# IDE & tooling
+.vscode/
+.idea/
+*.code-workspace
+dist/
